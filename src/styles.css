@@ -1,0 +1,17 @@
+/* RESET */
+* {
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+
+h1 {
+  padding: 1em;
+  background-color: #9EC6F8;
+  border: 2px solid #000;
+}
+
+ul {
+  list-style: none;
+}

@@ -1,0 +1,60 @@
+.add-btn,
+.search-wrap,
+.select-wrap {
+  display: inline-block;
+}
+
+input {
+  padding: 3px 20px;
+  border-radius: 15px;
+  border: 2px solid #000;
+}
+
+.search-icon {
+  position: absolute;
+  width: 16px;
+  top: 7px;
+  height: 16px;
+  left: 4px;
+  background: url(/assets/img/search.png) no-repeat;
+  background-size: contain;
+}
+
+.select-wrap,
+.search-wrap {
+  position: relative;
+}
+
+
+.add-btn {
+  width: 60px;
+  background-color: #B6D6A5;
+  box-shadow: 3px 3px 0px #000;
+  border: none;
+}
+
+select {
+  width: 200px;
+  height: 35px;
+  padding: 5px;
+  border: 2px solid #000;
+  -moz-appearance: none;
+  /* Firefox */
+  -webkit-appearance: none;
+  /* Safari and Chrome */
+  appearance: none;
+
+}
+
+i.arrow {
+  position: absolute;
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  display: inline-block;
+  top: 43%;
+  right: 10px;
+  width: 3px;
+  height: 3px;
+}
