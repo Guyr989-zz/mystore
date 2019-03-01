@@ -12,11 +12,11 @@ input {
 
 .search-icon {
   position: absolute;
+  top: 8px;
+  left: 7px;
   width: 16px;
-  top: 7px;
   height: 16px;
-  left: 4px;
-  background: url(/assets/img/search.png) no-repeat;
+  background: url('../../../assets/search.png') no-repeat;
   background-size: contain;
 }
 
@@ -26,12 +26,6 @@ input {
 }
 
 
-.add-btn {
-  width: 60px;
-  background-color: #B6D6A5;
-  box-shadow: 3px 3px 0px #000;
-  border: none;
-}
 
 select {
   width: 200px;

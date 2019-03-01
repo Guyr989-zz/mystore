@@ -1,14 +1,15 @@
 <ul>
   <li *ngFor="let product of allProducts; let i = index">
-    <div class="product-wrap" [hidden]="!product.price > 0">
+    <div (click)="newMessage(product)" class="product-wrap" [hidden]="!product.price > 0">
       <div class="thumbnail"><img src="{{product.thumbnailUrl}}" alt=""></div>
       <div class="product-details">
-        <div>{{product.name}}</div>
+        <div class="product-name">{{product.name}}</div>
         <p>{{product.description}}</p>
       </div>
       <div class="btn-wrap">
-        <button class="delete-btn" (click)="remove(i)">Delete</button>
+        <button class="btn delete-btn" (click)="remove(product.id)">Delete</button>
       </div>
     </div>
   </li>
 </ul>
+<h3>{{errorMsg }}</h3>

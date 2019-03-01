@@ -3,6 +3,13 @@
   border: 2px solid #000;
   height: 130px;
   margin: 10px 0;
+  cursor: pointer;
+}
+
+
+
+.product-wrap:first-child {
+  margin-top: 0;
 }
 
 .product-details,
@@ -38,14 +45,6 @@
   float: right;
 }
 
-.delete-btn {
-  background-color: #D58A36;
-  border: 2px solid #000;
-  width: 100px;
-  padding: 5px 10px;
-  margin: 10px;
-  vertical-align: bottom;
-}
 
 
 @media(max-width:1400px) {

@@ -1,0 +1,25 @@
+<div [hidden]="product.id == undefind" class="details-wrap">
+  <h3>product Name</h3>
+  <div [hidden]="product.url == undefind" class="img-wrap">
+    <img src="{{product.url}}" alt="{{product.name}}">
+  </div>
+  <form class="details-form">
+
+    <label for="productName">Name</label>
+    <input required class="name-input" [(ngModel)]="product.name" name="productName" [value]="product.name" type="text">
+
+
+    <label for="descrtiption">Description</label>
+    <textarea required class="textarea" [(ngModel)]="product.description" [value]="product.description" name="productDescription"></textarea>
+
+
+    <label for="price">Price</label>
+    <input required class="price-input" [(ngModel)]="product.price" [value]="product.price" name="price" type="number">$
+
+    <div class="msg msg-success" [hidden]="isValid">{{successMsg}}</div>
+    <div class="msg err-msg" [hidden]="isValid">{{errMsg }}</div>
+    <div class="button-wrap">
+      <button class="btn save-btn" (click)="saveProduct(detailsform)">Save</button>
+    </div>
+  </form>
+</div>

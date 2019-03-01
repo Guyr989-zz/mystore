@@ -3,8 +3,13 @@
   font-family: "Comic Sans MS", cursive, sans-serif;
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
 }
 
+input,
+textarea {
+  padding: 0.5em;
+}
 
 h1 {
   padding: 1em;
@@ -14,4 +19,75 @@ h1 {
 
 ul {
   list-style: none;
+}
+
+.nav-wrap,
+.details,
+.main {
+  float: left;
+  padding: 1em;
+  width: 50%;
+}
+
+.nav-wrap {
+  width: 100%;
+  padding-bottom: 0;
+}
+
+
+.btn {
+  width: 60px;
+  display: inline-block;
+  box-shadow: 3px 3px 0px #000;
+  border: none;
+}
+
+.btn:hover {
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+.btn:focus {
+  opacity: 1;
+}
+
+
+.save-btn,
+.add-btn {
+  background-color: #B6D6A5;
+}
+
+
+.delete-btn {
+  background-color: #D58A36;
+  border: 2px solid #000;
+  width: 100px;
+  padding: 5px 10px;
+  margin: 10px;
+  vertical-align: bottom;
+}
+
+.msg {
+  display: block;
+  color: #000;
+  width: 100%;
+  color: #fff;
+  font-size: 24px;
+  text-align: center;
+}
+
+.msg-success {
+  background-color: #28e203;
+
+}
+
+.err-msg {
+  background-color: #ac0101;
+}
+
+@media (max-width:768px) {
+  .main {
+    width: 100%;
+    display: block;
+  }
 }

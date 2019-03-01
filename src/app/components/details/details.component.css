@@ -1,0 +1,63 @@
+.details-wrap {
+  border: 2px solid #000;
+  position: relative;
+  padding: 2em 1em;
+}
+
+.details-wrap h3 {
+  position: absolute;
+  top: -20px;
+  left: 80px;
+  background: #fff;
+  padding: 0 10px;
+}
+
+
+.img-wrap {
+  width: 150px;
+  height: 150px;
+  margin-bottom: 2em;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+.details-form label {
+  display: block;
+  width: 100%;
+  font-size: x-small;
+}
+
+.details-form input,
+.details-form textarea {
+  margin-bottom: 20px;
+}
+
+.details-form div:last-child {
+  margin-bottom: 0;
+}
+
+
+.textarea,
+.name-input {
+  width: 100%;
+  height: 30px;
+  border: 2px solid #000;
+}
+
+.textarea {
+  height: 130px;
+  line-height: 10px;
+}
+
+
+.price-input {
+  width: 100px;
+  border: 2px solid #000;
+}
+
+.button-wrap {
+  text-align: right;
+}
