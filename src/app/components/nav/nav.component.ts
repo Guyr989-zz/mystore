@@ -1,3 +1,5 @@
+import { Product } from './../../../../../../myStore/src/app/product';
+import { ProductService } from './../../product.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavComponent implements OnInit {
 
-  constructor() { }
+  allProducts = [];
+
+  constructor(private ps: ProductService) {
+    this.ps.getProducts().subscribe(data => this.allProducts = data);
+  }
+
 
   ngOnInit() {
+
   }
 
   filterInput(e) {
@@ -19,12 +27,18 @@ export class NavComponent implements OnInit {
     Array.from(productName).forEach(function (productName) {
       var itemName = productName.firstChild.textContent;
       if (itemName.toLowerCase().indexOf(text) !== -1) {
-        productName.parentNode.parentNode.parentNode.style.display = 'block';
+        productName.parentElement.parentElement.parentElement.style.display = 'block';
       } else {
-        productName.parentNode.parentNode.parentNode.style.display = 'none';
+        productName.parentElement.parentElement.parentElement.style.display = 'none';
       }
     }
     );
+  }
+
+  orderItems(e) {
+    // this.allProducts.sort((a, b) => a.name.rendered.localeCompare(b.name.rendered));
+    console.log(e);
+    console.log(this.allProducts);
   }
 
 }

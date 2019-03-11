@@ -1,6 +1,6 @@
-<ul>
+<ul class="product-list">
   <li *ngFor="let product of allProducts; let i = index">
-    <div (click)="newMessage(product)" class="product-wrap" [hidden]="!product.price > 0">
+    <div (click)="newMessage(product);scrollToProductDetails()" class="product-wrap" [hidden]="!product.price > 0">
       <div class="thumbnail"><img src="{{product.thumbnailUrl}}" alt=""></div>
       <div class="product-details">
         <div class="product-name">{{product.name}}</div>

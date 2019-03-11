@@ -3,7 +3,7 @@
   <div [hidden]="product.url == undefind" class="img-wrap">
     <img src="{{product.url}}" alt="{{product.name}}">
   </div>
-  <form class="details-form">
+  <form id="details"  class="details-form">
 
     <label for="productName">Name</label>
     <input required class="name-input" [(ngModel)]="product.name" name="productName" [value]="product.name" type="text">

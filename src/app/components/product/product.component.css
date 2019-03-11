@@ -3,10 +3,12 @@
   border: 2px solid #000;
   height: 130px;
   margin: 10px 0;
-  cursor: pointer;
+
 }
 
-
+.product-wrap:hover {
+  cursor: pointer;
+}
 
 .product-wrap:first-child {
   margin-top: 0;
@@ -47,8 +49,23 @@
 
 
 
-@media(max-width:1400px) {
+@media (max-width:535px) {
   .product-wrap {
     height: auto;
+  }
+
+  .product-wrap>div {
+    display: block;
+    margin: 10px auto 1em;
+    float: none;
+    text-align: center;
+  }
+
+  .btn-wrap {
+    line-height: initial;
+  }
+
+  .btn-wrap {
+    float: none;
   }
 }

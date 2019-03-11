@@ -7,7 +7,7 @@
   <span>Sort By</span>
   <div class="select-wrap">
     <i class="arrow"></i>
-    <select>
+    <select (change)=orderItems($event)>
       <option value="name">name</option>
       <option value="recently added">recently added</option>
     </select>

@@ -19,7 +19,7 @@ export class ProductComponent implements OnInit {
 
   ngOnInit() {
 
-    this.productService.currentMessage.subscribe(message => this.message = message);
+    this.productService.currentMessage.subscribe(data => this.message = data);
 
     this.productService.getProducts().subscribe(data => this.allProducts = data
       , error => this.errorMsg = 'No data avilable'
@@ -31,11 +31,21 @@ export class ProductComponent implements OnInit {
     this.productService.changeMessage(product);
   }
 
-  remove(id) {
-    for (let i = 0; i < this.allProducts.length; i++) {
-      const element = this.allProducts[i];
-      if (element.id == id) {
-        this.allProducts.splice(i, 1);
+  scrollToProductDetails() {
+    if (window.innerWidth < 1024) {
+      let el = document.getElementById('details');
+      el.scrollIntoView();
+    }
+  }
+
+  remove(id: number) {
+    if (confirm('You are about to delete the product. are you sure?')) {
+
+      for (let i = 0; i < this.allProducts.length; i++) {
+        const element = this.allProducts[i];
+        if (element.id == id) {
+          this.allProducts.splice(i, 1);
+        }
       }
     }
   }

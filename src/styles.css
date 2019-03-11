@@ -64,6 +64,7 @@ ul {
   width: 100px;
   padding: 5px 10px;
   margin: 10px;
+  cursor: pointer;
   vertical-align: bottom;
 }
 
@@ -85,9 +86,20 @@ ul {
   background-color: #ac0101;
 }
 
-@media (max-width:768px) {
-  .main {
+@media(max-width:1024px) {
+
+  .main,
+  .nav-wrap,
+  .details,
+  .product-wrap {
     width: 100%;
-    display: block;
+    float: none;
+  }
+
+  body ul li .product-wrap,
+  .details {
+    max-width: 700px;
+    width: 100%;
+    margin: 10px auto !important;
   }
 }

@@ -61,3 +61,10 @@ img {
 .button-wrap {
   text-align: right;
 }
+
+
+@media(max-width:768px) {
+  .img-wrap {
+    margin: 0 auto;
+  }
+}
